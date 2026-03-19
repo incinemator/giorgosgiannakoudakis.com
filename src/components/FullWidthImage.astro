@@ -1,4 +1,6 @@
 ---
+import { url } from '../lib/base';
+
 interface Props {
   src: string;
   alt: string;
@@ -10,7 +12,7 @@ const { src, alt, caption } = Astro.props;
 
 <figure class="my-12 -mx-6 md:-mx-12">
   <img
-    src={src}
+    src={url(src)}
     alt={alt}
     class="w-full rounded-lg"
     loading="lazy"

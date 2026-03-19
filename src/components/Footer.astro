@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/base';
 const year = new Date().getFullYear();
 ---
 
@@ -25,7 +26,7 @@ const year = new Date().getFullYear();
         LinkedIn
       </a>
       <a
-        href="/about#contact"
+        href={url('/about#contact')}
         class="text-sm text-gray-600 hover:text-gray-400 transition-colors"
       >
         Contact

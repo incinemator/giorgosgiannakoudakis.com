@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { url } from '../lib/base';
 
 const services = [
   {
@@ -124,7 +125,7 @@ const process = [
         I'd love to hear about it. Head over to my contact form and tell me what you have in mind.
       </p>
       <a
-        href="/about#contact"
+        href={url('/about#contact')}
         class="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-medium transition-colors"
       >
         Get in Touch

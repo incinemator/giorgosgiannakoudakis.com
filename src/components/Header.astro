@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/base';
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
@@ -11,24 +12,24 @@ const navLinks = [
 
 <header class="fixed top-0 left-0 right-0 z-50 glass">
   <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="/" class="font-display font-semibold text-lg text-white tracking-tight hover:text-accent-light transition-colors">
+    <a href={url('/')} class="font-display font-semibold text-lg text-white tracking-tight hover:text-accent-light transition-colors">
       Georgios Giannakoudakis
     </a>
 
     <div class="flex items-center gap-8">
       {navLinks.map((link) => (
         <a
-          href={link.href}
+          href={link.external ? link.href : url(link.href)}
           {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           class:list={[
             'text-sm font-medium transition-colors relative',
-            !link.external && currentPath === link.href
+            !link.external && currentPath.endsWith(link.href === '/' ? '/' : link.href + '/')
               ? 'text-white'
               : 'text-gray-500 hover:text-gray-300',
           ]}
         >
           {link.label}
-          {!link.external && currentPath === link.href && (
+          {!link.external && currentPath.endsWith(link.href === '/' ? '/' : link.href + '/') && (
             <span class="absolute -bottom-1 left-0 right-0 h-px bg-accent" />
           )}
         </a>
@@ -51,11 +52,11 @@ const navLinks = [
   <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 px-6 pb-4">
     {navLinks.map((link) => (
       <a
-        href={link.href}
+        href={link.external ? link.href : url(link.href)}
         {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         class:list={[
           'block py-2 text-sm font-medium transition-colors',
-          !link.external && currentPath === link.href
+          !link.external && currentPath.endsWith(link.href === '/' ? '/' : link.href + '/')
             ? 'text-white'
             : 'text-gray-500 hover:text-gray-300',
         ]}

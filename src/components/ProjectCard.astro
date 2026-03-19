@@ -1,4 +1,6 @@
 ---
+import { url } from '../lib/base';
+
 interface Props {
   title: string;
   description: string;
@@ -13,14 +15,14 @@ const num = String(index + 1).padStart(2, '0');
 ---
 
 <a
-  href={href}
+  href={url(href)}
   class="group relative block overflow-hidden rounded-xl bg-surface-100 border border-white/5 card-hover"
   style={`animation-delay: ${index * 80}ms`}
 >
   <!-- Image -->
   <div class="aspect-[4/3] overflow-hidden">
     <img
-      src={cover}
+      src={url(cover)}
       alt={title}
       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       loading="lazy"
