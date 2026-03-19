@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a40 #0a0a0f;
+  }
+
+  body {
+    @apply bg-surface text-gray-300 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-400 rounded-full;
+  }
+}
+
+@layer components {
+  .prose-project {
+    @apply text-gray-400 leading-relaxed;
+  }
+
+  .prose-project h2 {
+    @apply text-white font-display text-2xl font-semibold mt-12 mb-4;
+  }
+
+  .prose-project h3 {
+    @apply text-gray-200 font-display text-xl font-medium mt-8 mb-3;
+  }
+
+  .prose-project p {
+    @apply mb-6 text-base leading-relaxed;
+  }
+
+  .prose-project ul {
+    @apply list-disc list-inside mb-6 space-y-1;
+  }
+
+  .prose-project ol {
+    @apply list-decimal list-inside mb-6 space-y-1;
+  }
+
+  .prose-project a {
+    @apply text-accent-light hover:text-accent underline underline-offset-2 transition-colors;
+  }
+
+  .prose-project img {
+    @apply rounded-lg w-full my-8;
+  }
+
+  .prose-project blockquote {
+    @apply border-l-2 border-accent/50 pl-4 italic text-gray-500 my-6;
+  }
+
+  .prose-project code {
+    @apply font-mono text-sm bg-surface-200 px-1.5 py-0.5 rounded text-accent-light;
+  }
+
+  .prose-project strong {
+    @apply text-gray-200 font-semibold;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-light via-accent-cyan to-accent-emerald;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1;
+  }
+
+  .glass {
+    @apply bg-surface-100/80 backdrop-blur-xl border border-white/5;
+  }
+}

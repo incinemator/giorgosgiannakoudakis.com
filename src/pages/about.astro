@@ -1,0 +1,276 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About - Georgios Giannakoudakis"
+  description="About Georgios Giannakoudakis - 3D Artist with an MSc from Utrecht University."
+>
+  <!-- Profile Hero -->
+  <section class="max-w-4xl mx-auto px-6 pt-24 pb-8 md:pt-32">
+    <div class="flex flex-col md:flex-row items-start gap-10 mb-12">
+      <div class="shrink-0">
+        <img
+          src="/georgios-profile.jpg"
+          alt="Georgios Giannakoudakis"
+          class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover border-2 border-white/10 shadow-lg shadow-accent/10"
+        />
+      </div>
+      <div>
+        <p class="text-sm font-mono text-accent-light mb-3">About</p>
+        <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-3">
+          Georgios Giannakoudakis
+        </h1>
+        <p class="text-lg text-gray-400">
+          3D Artist / Designer
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 pb-16">
+    <div class="grid md:grid-cols-3 gap-12">
+      <!-- Bio -->
+      <div class="md:col-span-2 space-y-6 text-gray-400 leading-relaxed">
+        <p>
+          With over <strong class="text-gray-200">nine years of experience</strong> in <strong class="text-gray-200">3D visualization</strong>
+          using <strong class="text-gray-200">Blender</strong>, I've built a strong foundation in <strong class="text-gray-200">modeling</strong>, <strong class="text-gray-200">materials</strong>, <strong class="text-gray-200">lighting</strong>, and <strong class="text-gray-200">rendering</strong>,
+          as well as translating real-world objects and data into compelling digital imagery.
+          I'm comfortable learning new tools quickly and enjoy experimenting with lighting, motion,
+          and visual storytelling.
+        </p>
+        <p>
+          I began working with Blender in its earlier versions, developing a strong comfort with
+          complex interfaces and a self-driven approach to learning new tools. My early projects
+          involved designing <strong class="text-gray-200">promotional posters</strong>
+          for a radio show I hosted, transforming symbolic elements into realistic visual compositions
+          to create a distinctive and memorable identity.
+        </p>
+        <p>
+          As a <strong class="text-gray-200">3D Visualization and Software Engineer at IMAI-MedTech</strong>
+          in Zurich, I designed from scratch a <strong class="text-gray-200">dedicated user interface within Blender</strong> to convert medical
+          images into 3D visualizations. I applied advanced material and shading techniques to enhance
+          the visualization of critical features, processed large structured datasets, and produced
+          animations used in funding presentations, combining software development, data processing,
+          and visual design.
+        </p>
+        <p>
+          Currently, as <strong class="text-gray-200">3D Graphics Designer at ROBO</strong>, I create a series of
+          <strong class="text-gray-200">videos</strong> for their 2026 <strong class="text-gray-200">promotional campaign</strong>. I design and animate the assembly of a custom
+          Arduino-based PCB kit, building a fully equipped electronics lab in Blender with highly
+          detailed models of real-world equipment. <strong class="text-gray-200">High-quality texturing</strong> is applied down to the
+          tiniest electronic component to achieve photo-realistic effect.
+        </p>
+        <p>
+          Beyond Blender, I work with <strong class="text-gray-200">Unreal Engine</strong> to build
+          <strong class="text-gray-200">interactive environments</strong> and <strong class="text-gray-200">real-time visualization workflows</strong>, spanning VR/AR/XR
+          applications, asset optimization, PBR material creation, retopology, rigging, and
+          performance optimization. I thrive at the intersection of artistic quality and technical precision.
+        </p>
+        <p>
+          I'm motivated by opportunities to grow through feedback and collaboration. On a personal
+          note, bikes, sports, and movement are a genuine part of my everyday life. I ride daily
+          and swim three to four times a week, including years of winter sea swimming in Greece.
+        </p>
+        <p>
+          Interested in working together? Drop me a message in the contact form below.
+        </p>
+      </div>
+
+      <!-- Info sidebar -->
+      <div class="space-y-12">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Education</p>
+          <p class="text-sm text-gray-300">MSc in Nanomaterials</p>
+          <p class="text-sm text-gray-400">Utrecht University, Netherlands</p>
+          <div class="mt-2">
+            <p class="text-sm text-gray-300">BSc in Physics</p>
+            <p class="text-sm text-gray-400">University of Crete, Greece</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Experience</p>
+          <div class="space-y-3">
+            <div>
+              <p class="text-sm text-gray-300">3D Graphics Designer</p>
+              <p class="text-sm text-gray-400">ROBO Educational &amp; Research Robotics</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-300">3D Visualization & Software Engineer</p>
+              <p class="text-sm text-gray-400">IMAI-MedTech, Zurich</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-300">Research Associate</p>
+              <p class="text-sm text-gray-400">Hellenic Mediterranean University, Greece</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Skills</p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              '3D Modeling', 'Texturing', 'Lighting', 'Shading',
+              'Animation', 'Rendering', 'Retopology', 'Rigging',
+              'UV Mapping', 'PBR Materials', 'Asset Optimization',
+              'Environment Design', 'Product Visualization',
+              'VR/AR/XR', 'Visual Storytelling',
+            ].map((skill) => (
+              <span class="px-2.5 py-1 text-xs rounded-full bg-surface-200 text-gray-400 border border-white/5">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Software</p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              'Blender', 'Cinema 4D', 'Unreal Engine',
+              'Substance Painter', 'Substance Designer',
+              'Photoshop', 'Arduino',
+            ].map((sw) => (
+              <span class="px-2.5 py-1 text-xs rounded-full bg-surface-200 text-gray-400 border border-white/5">
+                {sw}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Connect</p>
+          <div class="space-y-2">
+            <a href="https://www.artstation.com/georgegiannakoudakis5" target="_blank" rel="noopener noreferrer" class="block text-sm text-gray-400 hover:text-accent-light transition-colors">
+              ArtStation &rarr;
+            </a>
+            <a href="https://www.linkedin.com/in/giorgos-giannakoudakis-0b2095124/" target="_blank" rel="noopener noreferrer" class="block text-sm text-gray-400 hover:text-accent-light transition-colors">
+              LinkedIn &rarr;
+            </a>
+            <a href="#contact" class="block text-sm text-gray-400 hover:text-accent-light transition-colors">
+              Contact &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="max-w-4xl mx-auto px-6 pb-24">
+    <div class="rounded-2xl bg-surface-100 border border-white/5 p-8 md:p-12">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-2">Get in Touch</h2>
+      <p class="text-gray-500 mb-8">Have a project in mind or want to collaborate? Send me a message.</p>
+
+      <form
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        class="space-y-6"
+        id="contact-form"
+      >
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm"
+              placeholder="your@email.com"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="_subject"
+            required
+            class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm"
+            placeholder="Project inquiry, collaboration, job opportunity..."
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm resize-none"
+            placeholder="Tell me about your project or idea..."
+          ></textarea>
+        </div>
+
+        <!-- Honeypot spam protection -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <div class="flex items-center gap-4">
+          <button
+            type="submit"
+            class="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-medium transition-colors text-sm"
+          >
+            Send Message
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+          <p id="form-status" class="text-sm text-gray-500 hidden"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const status = document.getElementById('form-status') as HTMLElement;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.classList.add('hidden');
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' },
+        });
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = 'Message sent! I\'ll get back to you soon.';
+          status.classList.remove('hidden', 'text-red-400');
+          status.classList.add('text-accent-emerald');
+        } else {
+          throw new Error('Failed to send');
+        }
+      } catch {
+        status.textContent = 'Something went wrong. Please try again.';
+        status.classList.remove('hidden', 'text-accent-emerald');
+        status.classList.add('text-red-400');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <svg class="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>';
+      }
+    });
+  </script>
+</BaseLayout>

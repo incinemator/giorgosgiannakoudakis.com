@@ -1,0 +1,74 @@
+---
+title: "HeartWork Complete"
+description: "An anatomically accurate 3D model of the human heart with detailed vasculature, realistic texturing, and turntable animation."
+date: "2024-02"
+cover: "/projects/heartwork-complete/general-1.jpg"
+tags: ["Medical", "Sculpting", "Texturing"]
+software: ["Blender"]
+role: "3D Artist"
+---
+
+import ImageGrid from '../../components/ImageGrid.astro';
+import FullWidthImage from '../../components/FullWidthImage.astro';
+
+A highly detailed anatomical model of the human heart, built with scientific accuracy in mind. The project combines sculpting, procedural texturing, and careful shading to produce a result suitable for medical visualization or educational content.
+
+<div class="my-12">
+  <video
+    src="/projects/heartwork-complete/heart-rotation.mp4"
+    controls
+    autoplay
+    muted
+    loop
+    class="w-full rounded-lg"
+  />
+</div>
+
+## Final Renders
+
+The turntable renders show the heart from all angles, revealing the aorta, pulmonary arteries, and the branching coronary vessels that run across the surface of the myocardium. The wet, organic surface shader was built to convey the visceral quality of real tissue.
+
+<ImageGrid columns={2}>
+  <img src="/projects/heartwork-complete/general-1.jpg" alt="Heart front view" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/general-2.jpg" alt="Heart side view" class="rounded-lg" />
+</ImageGrid>
+
+<ImageGrid columns={2}>
+  <img src="/projects/heartwork-complete/general-3.jpg" alt="Heart angle view" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/general-4.jpg" alt="Heart rear view" class="rounded-lg" />
+</ImageGrid>
+
+<ImageGrid columns={2}>
+  <img src="/projects/heartwork-complete/general-5.jpg" alt="Heart back angle" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/general-6.jpg" alt="Heart alternate view" class="rounded-lg" />
+</ImageGrid>
+
+## Close-ups
+
+At close range, the layered texturing becomes visible: subtle surface displacement mimicking the fibrous texture of cardiac muscle, delicate veins branching across the surface, and the glossy subsurface scattering of the arterial walls.
+
+<ImageGrid columns={3}>
+  <img src="/projects/heartwork-complete/closeup-1.jpg" alt="Vein close-up" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/closeup-2.jpg" alt="Surface detail" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/closeup-bottom.jpg" alt="Bottom vasculature" class="rounded-lg" />
+</ImageGrid>
+
+## Top Views
+
+Overhead perspectives emphasize the complexity of the great vessels and the overall silhouette of the organ.
+
+<ImageGrid columns={3}>
+  <img src="/projects/heartwork-complete/top-1.jpg" alt="Top view 1" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/top-2.jpg" alt="Top view 2" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/top-3.jpg" alt="Top view 3" class="rounded-lg" />
+</ImageGrid>
+
+## Viewport & Wireframe
+
+The viewport renders and wireframe view expose the underlying topology. The mesh was built to support smooth subdivision while preserving anatomical landmarks, with color-coded arteries (red) and veins (blue) visible in the base mesh.
+
+<ImageGrid columns={3}>
+  <img src="/projects/heartwork-complete/viewport-1.jpg" alt="Viewport render front" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/viewport-2.jpg" alt="Viewport render side" class="rounded-lg" />
+  <img src="/projects/heartwork-complete/viewport-3.jpg" alt="Wireframe view" class="rounded-lg" />
+</ImageGrid>
