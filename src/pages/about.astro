@@ -74,7 +74,7 @@ import { url } from '../lib/base';
           and swim three to four times a week, including years of winter sea swimming in Greece.
         </p>
         <p>
-          Interested in working together? Drop me a message in the contact form below.
+          Interested in working together? <a href="mailto:giannakzorz@gmail.com" class="text-accent-light hover:text-accent underline underline-offset-2 transition-colors">Send me an email</a>.
         </p>
       </div>
 
@@ -149,8 +149,8 @@ import { url } from '../lib/base';
             <a href="https://www.linkedin.com/in/giorgos-giannakoudakis-0b2095124/" target="_blank" rel="noopener noreferrer" class="block text-sm text-gray-400 hover:text-accent-light transition-colors">
               LinkedIn &rarr;
             </a>
-            <a href="#contact" class="block text-sm text-gray-400 hover:text-accent-light transition-colors">
-              Contact &rarr;
+            <a href="mailto:giannakzorz@gmail.com" class="block text-sm text-gray-400 hover:text-accent-light transition-colors">
+              Email &rarr;
             </a>
           </div>
         </div>
@@ -158,120 +158,4 @@ import { url } from '../lib/base';
     </div>
   </section>
 
-  <!-- Contact Form -->
-  <section id="contact" class="max-w-4xl mx-auto px-6 pb-24">
-    <div class="rounded-2xl bg-surface-100 border border-white/5 p-8 md:p-12">
-      <h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-2">Get in Touch</h2>
-      <p class="text-gray-500 mb-8">Have a project in mind or want to collaborate? Send me a message.</p>
-
-      <form
-        action="https://formspree.io/f/YOUR_FORM_ID"
-        method="POST"
-        class="space-y-6"
-        id="contact-form"
-      >
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <label for="name" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm"
-              placeholder="Your name"
-            />
-          </div>
-          <div>
-            <label for="email" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm"
-              placeholder="your@email.com"
-            />
-          </div>
-        </div>
-
-        <div>
-          <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Subject</label>
-          <input
-            type="text"
-            id="subject"
-            name="_subject"
-            required
-            class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm"
-            placeholder="Project inquiry, collaboration, job opportunity..."
-          />
-        </div>
-
-        <div>
-          <label for="message" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            class="w-full px-4 py-3 rounded-lg bg-surface-200 border border-white/5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors text-sm resize-none"
-            placeholder="Tell me about your project or idea..."
-          ></textarea>
-        </div>
-
-        <!-- Honeypot spam protection -->
-        <input type="text" name="_gotcha" style="display:none" />
-
-        <div class="flex items-center gap-4">
-          <button
-            type="submit"
-            class="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-medium transition-colors text-sm"
-          >
-            Send Message
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </button>
-          <p id="form-status" class="text-sm text-gray-500 hidden"></p>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <script>
-    const form = document.getElementById('contact-form') as HTMLFormElement;
-    const status = document.getElementById('form-status') as HTMLElement;
-
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-      status.classList.add('hidden');
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' },
-        });
-
-        if (res.ok) {
-          form.reset();
-          status.textContent = 'Message sent! I\'ll get back to you soon.';
-          status.classList.remove('hidden', 'text-red-400');
-          status.classList.add('text-accent-emerald');
-        } else {
-          throw new Error('Failed to send');
-        }
-      } catch {
-        status.textContent = 'Something went wrong. Please try again.';
-        status.classList.remove('hidden', 'text-accent-emerald');
-        status.classList.add('text-red-400');
-      } finally {
-        btn.disabled = false;
-        btn.innerHTML = 'Send Message <svg class="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>';
-      }
-    });
-  </script>
 </BaseLayout>
