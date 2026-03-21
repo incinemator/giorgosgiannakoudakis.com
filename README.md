@@ -23,8 +23,7 @@ npm run preview    # preview production build
 
 The site is deployed to GitHub Pages via a GitHub Actions workflow. It is configured with:
 
-- **Site:** `https://incinemator.github.io`
-- **Base path:** `/giorgosgiannakoudakis.com`
+- **Site:** `https://giorgosgiannakoudakis.com`
 
 ## Project Structure
 
